@@ -1,6 +1,6 @@
 {
     "name": "@apsisxcoder/custom-functions",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "This project provides a set of custom date functions that can be easily integrated into a Vue.js application. These functions help with various date manipulations and formatting tasks. It is used for Ams4you.com",
     "main": "index.js",
     "scripts": {
