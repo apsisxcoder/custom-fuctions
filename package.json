@@ -1,6 +1,6 @@
 {
     "name": "@apsisxcoder/custom-functions",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "This project provides a set of custom date functions that can be easily integrated into a Vue.js application. These functions help with various date manipulations and formatting tasks. It is used for Ams4you.com",
     "main": "index.js",
     "scripts": {
@@ -8,7 +8,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/apsisxcoder/custom-fuctions.git"
+        "url": "git+https://github.com/apsisxcoder/custom-functions.git"
     },
     "keywords": [
         "moment-functions",
@@ -18,7 +18,7 @@
     "author": "apsisxcoder",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/apsisxcoder/custom-fuctions/issues"
+        "url": "https://github.com/apsisxcoder/custom-functions/issues"
     },
-    "homepage": "https://github.com/apsisxcoder/custom-fuctions#readme"
+    "homepage": "https://github.com/apsisxcoder/custom-functions#readme"
 }

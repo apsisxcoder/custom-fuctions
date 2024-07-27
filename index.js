@@ -253,7 +253,7 @@ export const DeepObjectCopy = (obj) => {
  *
  * @returns {Object|null} An object containing the key and value of the first difference found, or null if no difference is found.
  */
-const FindDifference = (prev, current) => {
+export const FindDifference = (prev, current) => {
     for (let key in prev) {
         if (prev[key] instanceof Object && current[key] instanceof Object) {
             if (Array.isArray(prev[key])) {
@@ -289,7 +289,7 @@ const FindDifference = (prev, current) => {
  * SetGrouppedList(BranchList, "branchId", "name")
  * @returns {Array} - An array containing the filtered countries.
  */
-const SetGrouppedList = (list, groupBy, nameBy) => {
+export const SetGrouppedList = (list, groupBy, nameBy) => {
     const sortedList = list.sort((a, b) => a[groupBy] - b[groupBy]);
     const grouppedByListId = {};
 
@@ -336,7 +336,7 @@ const CustomDateFunctions = {
         app.config.globalProperties.$GetNextSaturdayByWeek = GetNextSaturdayByWeek;
         app.config.globalProperties.$StringToSlug = StringToSlug;
         app.config.globalProperties.$StringToCapitalize = StringToCapitalize;
-        app.config.globalProperties.$VSelectFilterPhoneCountry = VSelectFilter;
+        app.config.globalProperties.$VSelectFilterPhoneCountry = VSelectFilterPhoneCountry;
         app.config.globalProperties.$ReadFileAsync = ReadFileAsync;
         app.config.globalProperties.$ExportYoutubeId = ExportYoutubeId;
         app.config.globalProperties.$DeepObjectCopy = DeepObjectCopy;
