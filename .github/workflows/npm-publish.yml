@@ -28,6 +28,7 @@ jobs:
                   node-version: 16
                   registry-url: https://registry.npmjs.org/
                   npm-auth-token: ${{ secrets.NPM_TOKEN }}
+
             - run: npm version patch
             - run: npm publish --access public
             - name: Push updated version to repository
