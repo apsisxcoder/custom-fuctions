@@ -9,14 +9,6 @@ on:
             - main
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v4
-            - uses: actions/setup-node@v3
-              with:
-                  node-version: 16
-
     publish-npm:
         needs: build
         runs-on: ubuntu-latest
@@ -24,14 +16,15 @@ jobs:
             - uses: actions/checkout@v4
             - uses: actions/setup-node@v3
               with:
-                  node-version: 16
+                  node-version: 21
                   registry-url: https://registry.npmjs.org/
                   npm-auth-token: ${{ secrets.NPM_TOKEN }}
-
+            - name: Configure Git
+              run: |
+                  git config --global user.name 'github-actions[bot]'
+                  git config --global user.email 'github-actions[bot]@users.noreply.github.com'
             - run: npm version patch
             - run: npm publish --access public
             - name: Push updated version to repository
               run: |
-                  git config --global user.name 'github-actions[bot]'
-                  git config --global user.email 'github-actions[bot]@users.noreply.github.com'
                   git push origin HEAD:main --follow-tags
