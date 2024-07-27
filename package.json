@@ -1,0 +1,24 @@
+{
+    "name": "@apsisxcoder/custom-functions",
+    "version": "0.0.2",
+    "description": "This project provides a set of custom date functions that can be easily integrated into a Vue.js application. These functions help with various date manipulations and formatting tasks.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/apsisxcoder/custom-fuctions.git"
+    },
+    "keywords": [
+        "moment-functions",
+        "utc-moment",
+        "custom-javascript-functions"
+    ],
+    "author": "apsisxcoder",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/apsisxcoder/custom-fuctions/issues"
+    },
+    "homepage": "https://github.com/apsisxcoder/custom-fuctions#readme"
+}
