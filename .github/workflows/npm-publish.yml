@@ -26,4 +26,10 @@ jobs:
               with:
                   node-version: 16
                   registry-url: https://registry.npmjs.org/
+            - run: npm version patch
             - run: npm publish --access public
+            - name: Push updated version to repository
+              run: |
+                  git config --global user.name 'github-actions[bot]'
+                  git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+                  git push origin HEAD:main --follow-tags
