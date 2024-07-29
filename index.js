@@ -325,6 +325,36 @@ export const SetGrouppedList = (list, groupBy, nameBy) => {
     return newListWithHeader;
 };
 
+/**
+ * Converts a duration in months to a human-readable string representing the duration in years and months.
+ *
+ * Example:
+ * DurationToYear(12) => "1 year"
+ * DurationToYear(18) => "1 year upto 1½ years"
+ *
+ * @param {number} months - The duration in months.
+ * @returns {string} - A string representing the duration in a human-readable format.
+ */
+export const DurationToYear = (months) => {
+    if (months <= 5) {
+        return "5 Months or less";
+    } else if (months <= 11) {
+        return "6 - 11 Months";
+    } else if (months <= 18) {
+        return "1 year upto 1½ years";
+    } else if (months <= 24) {
+        return "1½ years upto 2 Years";
+    } else if (months <= 30) {
+        return "2 year upto 2½ years";
+    } else if (months <= 42) {
+        return "3 Years upto 3½ years";
+    } else if (months <= 54) {
+        return "4 Years upto 4½ years";
+    } else {
+        return "5 Years and More";
+    }
+};
+
 const CustomDateFunctions = {
     install(app) {
         app.config.globalProperties.$FormatDate = FormatDate;
@@ -342,6 +372,7 @@ const CustomDateFunctions = {
         app.config.globalProperties.$DeepObjectCopy = DeepObjectCopy;
         app.config.globalProperties.$FindDifference = FindDifference;
         app.config.globalProperties.$SetGrouppedList = SetGrouppedList;
+        app.config.globalProperties.$DurationToYear = DurationToYear;
     },
 };
 
